@@ -1,0 +1,139 @@
+# trace: trace/trace.log
+# events: 2000000
+# unique edges: 26
+
+## window = 1 (unique: 26)
+      647246  32.36%  call<-add
+      388348  19.42%  call<-select
+      183834   9.19%  add<-phi
+      108321   5.42%  icmp<-add
+      108321   5.42%  br<-icmp
+      107877   5.39%  add<-mul
+       64725   3.24%  call<-mul
+       64725   3.24%  call<-or
+       43556   2.18%  getelementptr<-phi
+       32770   1.64%  getelementptr<-alloca
+       32768   1.64%  and<-call
+       32768   1.64%  icmp<-and
+       32768   1.64%  zext<-icmp
+       32768   1.64%  store<-zext
+       32768   1.64%  store<-getelementptr
+       10831   0.54%  trunc<-phi
+       10831   0.54%  mul<-trunc
+       10788   0.54%  add<-shl
+       10788   0.54%  getelementptr<-add
+       10788   0.54%  load<-getelementptr
+       10788   0.54%  icmp<-load
+       10788   0.54%  select<-icmp
+       10788   0.54%  or<-mul
+          43   0.00%  shl<-phi
+           2   0.00%  bitcast<-alloca
+
+## window = 2 (unique: 41)
+      388348  19.42%  call<-add  call<-select
+      258898  12.94%  call<-select  call<-add
+      258898  12.94%  call<-add  call<-add
+      108321   5.42%  add<-phi  icmp<-add
+      108321   5.42%  icmp<-add  br<-icmp
+       75511   3.78%  br<-icmp  add<-phi
+       64725   3.24%  add<-phi  add<-mul
+       64725   3.24%  add<-mul  call<-mul
+       64725   3.24%  call<-mul  call<-add
+       64725   3.24%  call<-select  call<-or
+       64725   3.24%  call<-or  call<-add
+       64724   3.24%  call<-select  add<-phi
+       32768   1.64%  and<-call  icmp<-and
+       32768   1.64%  icmp<-and  zext<-icmp
+       32768   1.64%  zext<-icmp  getelementptr<-alloca
+       32768   1.64%  getelementptr<-alloca  getelementptr<-phi
+       32768   1.64%  getelementptr<-phi  store<-zext
+       32768   1.64%  store<-zext  store<-getelementptr
+       32768   1.64%  store<-getelementptr  add<-phi
+       32767   1.64%  br<-icmp  and<-call
+       32364   1.62%  add<-mul  add<-mul
+       10831   0.54%  trunc<-phi  mul<-trunc
+       10788   0.54%  add<-phi  add<-shl
+       10788   0.54%  add<-shl  getelementptr<-phi
+       10788   0.54%  getelementptr<-phi  getelementptr<-add
+
+## window = 3 (unique: 51)
+      258898  12.94%  call<-add  call<-select  call<-add
+      258898  12.94%  call<-select  call<-add  call<-add
+      258898  12.94%  call<-add  call<-add  call<-select
+      108321   5.42%  add<-phi  icmp<-add  br<-icmp
+       75511   3.78%  icmp<-add  br<-icmp  add<-phi
+       64725   3.24%  add<-phi  add<-mul  call<-mul
+       64725   3.24%  add<-mul  call<-mul  call<-add
+       64725   3.24%  call<-mul  call<-add  call<-select
+       64725   3.24%  call<-add  call<-select  call<-or
+       64725   3.24%  call<-select  call<-or  call<-add
+       64725   3.24%  call<-or  call<-add  call<-select
+       64724   3.24%  call<-add  call<-select  add<-phi
+       64724   3.24%  call<-select  add<-phi  icmp<-add
+       53937   2.70%  br<-icmp  add<-phi  add<-mul
+       32768   1.64%  and<-call  icmp<-and  zext<-icmp
+       32768   1.64%  icmp<-and  zext<-icmp  getelementptr<-alloca
+       32768   1.64%  zext<-icmp  getelementptr<-alloca  getelementptr<-phi
+       32768   1.64%  getelementptr<-alloca  getelementptr<-phi  store<-zext
+       32768   1.64%  getelementptr<-phi  store<-zext  store<-getelementptr
+       32768   1.64%  store<-zext  store<-getelementptr  add<-phi
+       32768   1.64%  store<-getelementptr  add<-phi  icmp<-add
+       32767   1.64%  icmp<-add  br<-icmp  and<-call
+       32767   1.64%  br<-icmp  and<-call  icmp<-and
+       21576   1.08%  add<-mul  add<-mul  add<-mul
+       10829   0.54%  br<-icmp  add<-phi  icmp<-add
+
+## window = 4 (unique: 58)
+      258898  12.94%  call<-add  call<-select  call<-add  call<-add
+      258898  12.94%  call<-select  call<-add  call<-add  call<-select
+      194173   9.71%  call<-add  call<-add  call<-select  call<-add
+       75511   3.78%  add<-phi  icmp<-add  br<-icmp  add<-phi
+       64725   3.24%  add<-phi  add<-mul  call<-mul  call<-add
+       64725   3.24%  add<-mul  call<-mul  call<-add  call<-select
+       64725   3.24%  call<-mul  call<-add  call<-select  call<-or
+       64725   3.24%  call<-add  call<-select  call<-or  call<-add
+       64725   3.24%  call<-select  call<-or  call<-add  call<-select
+       64725   3.24%  call<-or  call<-add  call<-select  call<-add
+       64724   3.24%  call<-add  call<-add  call<-select  add<-phi
+       64724   3.24%  call<-add  call<-select  add<-phi  icmp<-add
+       64724   3.24%  call<-select  add<-phi  icmp<-add  br<-icmp
+       53937   2.70%  icmp<-add  br<-icmp  add<-phi  add<-mul
+       53937   2.70%  br<-icmp  add<-phi  add<-mul  call<-mul
+       32768   1.64%  and<-call  icmp<-and  zext<-icmp  getelementptr<-alloca
+       32768   1.64%  icmp<-and  zext<-icmp  getelementptr<-alloca  getelementptr<-phi
+       32768   1.64%  zext<-icmp  getelementptr<-alloca  getelementptr<-phi  store<-zext
+       32768   1.64%  getelementptr<-alloca  getelementptr<-phi  store<-zext  store<-getelementptr
+       32768   1.64%  getelementptr<-phi  store<-zext  store<-getelementptr  add<-phi
+       32768   1.64%  store<-zext  store<-getelementptr  add<-phi  icmp<-add
+       32768   1.64%  store<-getelementptr  add<-phi  icmp<-add  br<-icmp
+       32767   1.64%  add<-phi  icmp<-add  br<-icmp  and<-call
+       32767   1.64%  icmp<-add  br<-icmp  and<-call  icmp<-and
+       32767   1.64%  br<-icmp  and<-call  icmp<-and  zext<-icmp
+
+## window = 5 (unique: 63)
+      258898  12.94%  call<-add  call<-select  call<-add  call<-add  call<-select
+      194173   9.71%  call<-select  call<-add  call<-add  call<-select  call<-add
+      194173   9.71%  call<-add  call<-add  call<-select  call<-add  call<-add
+       64725   3.24%  add<-phi  add<-mul  call<-mul  call<-add  call<-select
+       64725   3.24%  add<-mul  call<-mul  call<-add  call<-select  call<-or
+       64725   3.24%  call<-mul  call<-add  call<-select  call<-or  call<-add
+       64725   3.24%  call<-add  call<-select  call<-or  call<-add  call<-select
+       64725   3.24%  call<-select  call<-or  call<-add  call<-select  call<-add
+       64725   3.24%  call<-or  call<-add  call<-select  call<-add  call<-add
+       64724   3.24%  call<-select  call<-add  call<-add  call<-select  add<-phi
+       64724   3.24%  call<-add  call<-add  call<-select  add<-phi  icmp<-add
+       64724   3.24%  call<-add  call<-select  add<-phi  icmp<-add  br<-icmp
+       64724   3.24%  call<-select  add<-phi  icmp<-add  br<-icmp  add<-phi
+       53937   2.70%  add<-phi  icmp<-add  br<-icmp  add<-phi  add<-mul
+       53937   2.70%  icmp<-add  br<-icmp  add<-phi  add<-mul  call<-mul
+       53937   2.70%  br<-icmp  add<-phi  add<-mul  call<-mul  call<-add
+       32768   1.64%  and<-call  icmp<-and  zext<-icmp  getelementptr<-alloca  getelementptr<-phi
+       32768   1.64%  icmp<-and  zext<-icmp  getelementptr<-alloca  getelementptr<-phi  store<-zext
+       32768   1.64%  zext<-icmp  getelementptr<-alloca  getelementptr<-phi  store<-zext  store<-getelementptr
+       32768   1.64%  getelementptr<-alloca  getelementptr<-phi  store<-zext  store<-getelementptr  add<-phi
+       32768   1.64%  getelementptr<-phi  store<-zext  store<-getelementptr  add<-phi  icmp<-add
+       32768   1.64%  store<-zext  store<-getelementptr  add<-phi  icmp<-add  br<-icmp
+       32767   1.64%  store<-getelementptr  add<-phi  icmp<-add  br<-icmp  and<-call
+       32767   1.64%  add<-phi  icmp<-add  br<-icmp  and<-call  icmp<-and
+       32767   1.64%  icmp<-add  br<-icmp  and<-call  icmp<-and  zext<-icmp
+
